@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#CCEFFF"
+    android:padding="16dp">
+
+    <!-- Üst Menü -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|end"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/icon_menu"
+            android:layout_gravity="start"
+            android:contentDescription="Menü" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/coin_icon"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/coinText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Sekmeler: Gün - Hafta - Ay - Yıl -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="4"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tabGun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Gün"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="@drawable/tab_selected"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tabHafta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hafta"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tabAy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ay"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tabYil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Yıl"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Akvaryum resmi -->
+    <ImageView
+        android:id="@+id/akvaryumImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/ocean"
+        android:scaleType="fitCenter"
+        android:layout_marginVertical="8dp" />
+
+    <!-- Grafik -->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+</LinearLayout>

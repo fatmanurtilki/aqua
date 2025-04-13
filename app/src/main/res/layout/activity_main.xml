@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99DCE6"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <!-- Daire şeklinde progress bar (Kendi çizimimiz) -->
+    <ImageView
+        android:id="@+id/circle_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/circle_empty"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <ImageView
+        android:id="@+id/circle_progress"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/circle_full"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/circle_background"
+        app:layout_constraintEnd_toEndOf="@+id/circle_background"
+        app:layout_constraintStart_toStartOf="@+id/circle_background"
+        app:layout_constraintTop_toTopOf="@+id/circle_background" />
+
+    <!-- Lottie Animasyon -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="@+id/circle_background"
+        app:layout_constraintEnd_toEndOf="@+id/circle_background"
+        app:layout_constraintStart_toStartOf="@+id/circle_background"
+        app:layout_constraintTop_toTopOf="@+id/circle_background"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true" />
+
+    <!-- Zaman göstergesi -->
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="25:00"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circle_background" />
+
+    <!-- Kontrol butonları -->
+    <Button
+        android:id="@+id/btn_start_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Başlat"
+        app:layout_constraintEnd_toStartOf="@+id/btn_reset"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timer" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Sıfırla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_start_pause"
+        app:layout_constraintTop_toTopOf="@+id/btn_start_pause" />
+
+    <!-- Zaman ayarı -->
+    <EditText
+        android:id="@+id/et_minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:hint="Dakika Girin"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start_pause" />
+
+    <Spinner
+        android:id="@+id/soundSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

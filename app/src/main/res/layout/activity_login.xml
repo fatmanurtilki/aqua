@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCEFFF"
+    android:padding="24dp">
+
+    <!-- Menü ikonu -->
+    <ImageView
+        android:id="@+id/icon_menu"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/icon_menu"
+        android:contentDescription="Menü"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Kullanıcı ikonu -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/icon_user"
+        android:contentDescription="Logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <!-- Mail giriş -->
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="24dp"
+        android:hint="Mail Adresiniz Giriniz"
+        android:background="@drawable/rounded_white"
+        android:paddingStart="16dp"
+        android:textColor="#000000"
+        android:textColorHint="#003366"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <!-- Şifre giriş -->
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/emailInput"
+        android:layout_marginTop="16dp"
+        android:hint="Şifrenizi Giriniz"
+        android:background="@drawable/rounded_white"
+        android:paddingStart="16dp"
+        android:textColor="#000000"
+        android:textColorHint="#003366"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:inputType="textPassword" />
+
+    <!-- Sign in butonu -->
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/passwordInput"
+        android:layout_marginTop="32dp"
+        android:layout_alignParentStart="true"
+        android:text="Sign in"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:background="@drawable/fish_button" />
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/passwordInput"
+        android:layout_marginTop="32dp"
+        android:layout_alignParentStart="true"
+        android:text="Sign in"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:background="@drawable/fish_button" />
+
+
+    <!-- Sign up butonu -->
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@id/signInButton"
+        android:layout_alignParentEnd="true"
+        android:text="Sign up"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:background="@drawable/fish_button" />
+
+</RelativeLayout>
