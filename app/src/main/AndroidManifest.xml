@@ -12,15 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Atınç"
         tools:targetApi="31">
-        <activity
-            android:name=".MainActivity"
+        <activity android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".AkvaryumActivity" />
+        <activity android:name=".SayacActivity" />
+        <activity android:name=".RozetActivity" />
+        <activity android:name=".IstatistikActivity" />
+        <activity android:name=".StoreActivity" />
+        <activity android:name=".ArkaPlanActivity" />
+        <activity android:name=".AyarlarActivity" />
+        <activity android:name=".DilActivity" />
+        <activity android:name=".ErisimActivity" />
+        <activity android:name=".HesapActivity" />
+        <activity android:name=".SesActivity" />
     </application>
 
 </manifest>

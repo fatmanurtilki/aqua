@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#CCEFFF"
+    android:padding="16dp">
+
+    <!-- Toolbar -->
+    <include layout="@layout/toolbar_layout" />
+
+    <!-- Ayar Butonları -->
+    <Button
+        android:id="@+id/btnArkaPlan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🎨 Arka Plan Rengi"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/btnErisim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📱 Erişim Listesi"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnDil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🌐 Dil"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnSes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🎵 Ses"
+        android:layout_marginTop="12dp" />
+</LinearLayout>

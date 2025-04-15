@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#CCEFFF"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arka Plan Rengi Seçiniz"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/btnBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Açık Mavi"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnPeach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Şeftali Rengi"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnSkin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ten Rengi"
+        android:layout_marginBottom="12dp" />
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="#00688B"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+
+    <!-- Menü ikonları -->
+    <ImageView
+        android:id="@+id/menuAkvaryum"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/bos_akvaryum_icon"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="Akvaryum" />
+
+    <ImageView
+        android:id="@+id/menuIstatistik"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/chart_icon"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="İstatistik" />
+
+    <ImageView
+        android:id="@+id/menuRozet"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/rozet_ikonu"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="Rozet" />
+
+    <ImageView
+        android:id="@+id/menuStore"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/store_icon"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="Store" />
+
+    <ImageView
+        android:id="@+id/menuHesap"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/user_icon"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="Hesap" />
+
+    <ImageView
+        android:id="@+id/menuAyarlar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/settings_icon"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="Ayarlar" />
+
+    <!-- Spacer -->
+    <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" />
+
+    <!-- Puan bilgisi -->
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/coin_icon"
+        android:layout_marginEnd="4dp" />
+
+    <TextView
+        android:id="@+id/toolbarPuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+</LinearLayout>

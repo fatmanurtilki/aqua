@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_akvaryum"
+        android:title="Akvaryum"
+        android:icon="@drawable/bos_akvaryum_icon" />
+
+    <item
+        android:id="@+id/menu_istatistik"
+        android:title="İstatistik"
+        android:icon="@drawable/chart_icon" />
+
+    <item
+        android:id="@+id/menu_rozet"
+        android:title="Rozet"
+        android:icon="@drawable/rozet_ikonu" />
+
+    <item
+        android:id="@+id/menu_store"
+        android:title="Store"
+        android:icon="@drawable/store_icon" />
+
+    <item
+        android:id="@+id/menu_hesabim"
+        android:title="Hesabım"
+        android:icon="@drawable/user_icon" />
+
+    <item
+        android:id="@+id/menu_ayarlar"
+        android:title="Ayarlar"
+        android:icon="@drawable/settings_icon" />
+</menu>

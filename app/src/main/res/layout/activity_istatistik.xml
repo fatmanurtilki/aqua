@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#CCEFFF">
+
+    <!-- Toolbar -->
+    <include layout="@layout/toolbar_layout" />
+
+    <!-- Üst Rozetler -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="12dp">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/rozet_mercan"
+            android:layout_margin="8dp" />
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/rozet_gemi"
+            android:layout_margin="8dp" />
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/rozet_kabuk"
+            android:layout_margin="8dp" />
+    </LinearLayout>
+
+    <!-- Filtre Butonları -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button android:id="@+id/btnGun" android:text="Gün"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp" />
+
+        <Button android:id="@+id/btnHafta" android:text="Hafta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp" />
+
+        <Button android:id="@+id/btnAy" android:text="Ay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp" />
+
+        <Button android:id="@+id/btnYil" android:text="Yıl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp" />
+    </LinearLayout>
+
+    <!-- Balık Sayısı Görseli -->
+    <ImageView
+        android:id="@+id/fishVisual"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ocean"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Grafik Alanı -->
+    <ImageView
+        android:id="@+id/grafikView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/turkograf"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
