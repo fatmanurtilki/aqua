@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,52 +10,63 @@
     android:background="#CCEFFF"
     android:padding="16dp">
 
-    <!-- Üst Menü -->
-    <LinearLayout
+    <!-- Toolbar (Güncellenmiş Hali) -->
+
+    <!-- Sekmeler: Gün - Hafta - Ay - Yıl -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical|end"
-        android:paddingBottom="16dp">
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="16dp"
+        android:background="#CCEFFF"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:layout_editor_absoluteX="-153dp">
 
         <ImageView
+            android:id="@+id/menuIcon"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:src="@drawable/icon_menu"
-            android:layout_gravity="start"
-            android:contentDescription="Menü" />
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:contentDescription="Menü"
+            android:focusable="true"
+            android:onClick="onImageClick"
+            android:src="@drawable/icon_menu" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="end"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/coin_icon"
-                android:layout_marginEnd="4dp" />
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/coin_icon" />
 
             <TextView
                 android:id="@+id/coinText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9000"
+                android:textColor="#000000"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#000000" />
+                android:textStyle="bold" />
         </LinearLayout>
-    </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
-    <!-- Sekmeler: Gün - Hafta - Ay - Yıl -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
         android:weightSum="4"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp">
 
         <TextView
@@ -113,13 +126,27 @@
         android:layout_height="300dp"
         android:src="@drawable/ocean"
         android:scaleType="fitCenter"
-        android:layout_marginVertical="8dp" />
+        android:layout_marginVertical="16dp"
+        android:contentDescription="Akvaryum görseli" />
 
     <!-- Grafik -->
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barChart"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        tools:visibility="visible" />
+
+    <!-- Veri Yok Uyarısı -->
+    <TextView
+        android:id="@+id/noDataText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No chart data available."
+        android:textSize="16sp"
+        android:textColor="#757575"
+        android:gravity="center"
+        android:padding="16dp"
+        android:visibility="gone" />
 </LinearLayout>

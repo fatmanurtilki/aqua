@@ -1,6 +1,10 @@
 package com.example.atn
 
 import android.animation.ValueAnimator
+import android.content.Intent
+import android.view.Menu
+import android.view.MenuItem
+import androidx.appcompat.widget.Toolbar
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -32,6 +36,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Toolbar'ı ayarla
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+
         sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
         selectedSound = sharedPreferences.getString("selectedSound", "forest") ?: "forest"
         animationView = binding.animationView
@@ -41,6 +51,43 @@ class MainActivity : AppCompatActivity() {
         setupSoundSpinner()
         updateTimerText()
         updateProgressCircle()
+    }
+
+    // Menüyü oluştur
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    // Menü seçeneklerini işle
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_main -> {
+                startActivity(Intent(this, MainActivity::class.java))
+                true
+            }
+            R.id.action_statistics -> {
+                startActivity(Intent(this, StatisticsActivity::class.java))
+                true
+            }
+            R.id.action_badges -> {
+                startActivity(Intent(this, RozetActivity::class.java))
+                true
+            }
+            R.id.action_store -> {
+                startActivity(Intent(this, MainActivity::class.java))
+                true
+            }
+            R.id.action_hesap -> {
+                startActivity(Intent(this, MainActivity::class.java))
+                true
+            }
+            R.id.menu_settings -> {
+                startActivity(Intent(this, MainActivity::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun setupButtons() {

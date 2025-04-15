@@ -58,7 +58,7 @@
 
     <!-- Sign in butonu -->
     <Button
-        android:id="@+id/signInButton"
+
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_below="@id/passwordInput"
@@ -71,7 +71,7 @@
         android:background="@drawable/fish_button" />
 
     <Button
-        android:id="@+id/signInButton"
+
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_below="@id/passwordInput"
@@ -89,7 +89,7 @@
         android:id="@+id/signUpButton"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_alignBaseline="@id/signInButton"
+
         android:layout_alignParentEnd="true"
         android:text="Sign up"
         android:textStyle="bold"
